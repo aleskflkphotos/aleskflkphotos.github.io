@@ -141,6 +141,7 @@ body{
     display: flex;
     margin-bottom:3em;
     width: 75%;
+    max-height: 50vh;
     flex-direction: row;
     background-color: #761f51;
     color: white;
@@ -149,15 +150,18 @@ body{
     justify-content: center;
 }
 .personne-img {
+    top:0;
     flex: 0 0 auto;
-    width:  50%;
+
     height: auto;
+    max-height: 50vh;
     
 }
 
 .personne-img img {
-    height: 100%;
-    width: auto;
+    height: auto;
+    max-height: 50vh;
+    width: 100%;
     border-radius: 2em;
     display: block;
 }
