@@ -521,17 +521,20 @@ body{
 
     .personne {
         flex-direction: column;
-        width: 95%;
+        width: 50%;
+        max-height: 100%;
     }
 
     .personne-img{
         width: 100%;
         height: auto;
+        max-height: 100%;
     }
 
     .personne-img img{
         width: 100%;
         height: auto;
+        max-height: 100%;
         overflow: hidden;
     }
     .personne-text > p {
