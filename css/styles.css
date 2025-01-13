@@ -490,9 +490,20 @@ body{
 }
 
 @media screen and (max-width: 1200px) {
+    .up{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    
     .intro-for-website p {
         margin:0 1em;
         text-align: justify;
+        font-size: 1em;
     }
 
     .personne {
@@ -505,10 +516,12 @@ body{
         margin-top: 0;
     }
     .contact-page h3 {
+        font-size: 1.5em;
         width: 85%;
     }
 
     .contact-page h4 {
         width: 85%;
+        font-size: 1em;
     }
 }
