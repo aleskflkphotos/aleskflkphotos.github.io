@@ -5,7 +5,7 @@ html{
     padding: 0;
 }
 body{
-    width: 100vw;
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -140,7 +140,7 @@ body{
     border-radius: 2em;
     display: flex;
     margin-bottom:3em;
-    width: 60%;
+    width: 75%;
     flex-direction: row;
     background-color: #761f51;
     color: white;
@@ -150,7 +150,8 @@ body{
 }
 .personne-img {
     flex: 0 0 auto;
-    height: 50%;
+    width:  50%;
+    height: auto;
     
 }
 
@@ -167,9 +168,11 @@ body{
 }
 .personne-text > h2{
     font-size: 3em;
+    margin:0.5em;
 }
 
 .personne-text > p{
+    margin:0.5em;
     font-size: 1.5em;
 }
 
@@ -524,7 +527,7 @@ body{
     }
 
     .photo-category {
-        height: 50vh;
+        min-height: 50vh;
     }
     .contact-page h3 {
         font-size: 1.5em;

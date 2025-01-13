@@ -134,26 +134,43 @@ tl.from('.intro-for-photos', {
 /********************FORM CONTACT************************************************** */
 
 document.getElementById('emailForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Empêche le rechargement de la page
 
+    // Récupère les valeurs du formulaire
     const subject = document.getElementById('subject').value;
     const body = document.getElementById('body').value;
+    const email = document.getElementById('email').value;
+    // URL du Webhook Discord
+    const webhookUrl = "https://discordapp.com/api/webhooks/1328416459025547315/7QvldFLZMk62BSdvR7c2VJqlkM7KOGC2YbQvU2NwUm3Ewa0oGxZdp9nszfjuj9Hkef2j"; // Remplacez par votre URL de webhook
 
-    // Crée une URL mailto
-    //const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Crée le contenu du message
+    const message = {
+        content: `**Nouvelle soumission de formulaire**** :**\n Email : **${email}**\n**Sujet :** ${subject}\n**Message :** ${body}`,
+    };
 
-    // Ouvre le client mail
-    //window.location.href = mailtoLink;
-
-    // Masque le formulaire avec une transition de fermeture verticale
-    const formContainer = document.getElementById('emailForm');
-    formContainer.classList.add('hidden');
-
-    // Affiche le message de remerciement après un délai
-    setTimeout(() => {
-        const thankYouMessage = document.getElementById('thankYouMessage');
-        thankYouMessage.classList.add('visible');
-    }, 500);
+    // Envoie le message au Webhook Discord
+    fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(message),
+    })
+    .then(response => {
+        if (response.ok) {
+            // Masque le formulaire et affiche le message de remerciement
+            document.getElementById('emailForm').style.display = 'none';
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            thankYouMessage.style.display = 'block';
+        } else {
+            console.error("Erreur lors de l'envoi :", response.statusText);
+            alert("Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.");
+        }
+    })
+    .catch(error => {
+        console.error("Erreur lors de la connexion au webhook :", error);
+        alert("Une erreur réseau est survenue. Veuillez réessayer.");
+    });
 });
 
 
