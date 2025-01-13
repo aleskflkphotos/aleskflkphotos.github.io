@@ -297,8 +297,6 @@ body{
 
 .contact-page-former{
     width: 75%;
-    background-color: #761f51;
-    border-radius: 2em;
 }
 
 .contact-page h3{
@@ -553,5 +551,30 @@ body{
     }
     .form-container button {
         width: 80% !important;
+    }
+
+    .img-section {
+        width: 30%;
+    }
+
+    .img-section:first-of-type {
+        margin-left: 60%;
+    }
+    
+    .img-section:nth-child(2) {
+        margin-left: 30%;
+        margin-top: 80%;
+    }
+    .img-section:nth-child(3) {
+        margin-right: 30%;
+        margin-top: 60%;
+    }
+    .img-section:nth-child(4) {
+        margin-left: 30%;
+        margin-top: 80%;
+    }
+    
+    .img-section:last-of-type {
+        margin-right: 60%;
     }
 }
