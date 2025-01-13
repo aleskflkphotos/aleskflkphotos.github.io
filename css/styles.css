@@ -506,7 +506,7 @@ body{
     }
 
     .citation{
-        font-size: 1.7em;
+        font-size: 1.1em;
     }
     
     .intro-for-website p {
@@ -516,13 +516,27 @@ body{
     }
 
     .personne {
+        flex-direction: column;
         width: 95%;
+    }
+
+    .personne-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .personne-img img{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
     }
     .personne-text > p {
         margin-top: 0;
+        font-size: 1em;
     }
     .personne-text > h2 {
         margin-top: 0;
+        font-size: 1.3em;
     }
 
     .photo-category {
