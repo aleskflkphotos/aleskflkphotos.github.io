@@ -515,6 +515,10 @@ body{
     .personne-text > h2 {
         margin-top: 0;
     }
+
+    .photo-category {
+        height: 50vh;
+    }
     .contact-page h3 {
         font-size: 1.5em;
         width: 85%;
