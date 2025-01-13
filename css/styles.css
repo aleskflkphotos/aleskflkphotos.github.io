@@ -328,7 +328,7 @@ body{
 
 
 .form-container {
-    padding: 1em;
+    margin: 1em;
     border-radius: 1em;
     box-shadow: 0 4px 6px rgba(128, 128, 128, 0.1);
     width: 100%;
@@ -495,6 +495,7 @@ body{
 @media screen and (max-width: 1000px) {
     html,body{
         width: 100%;
+        overflow-x: hidden;
     }
 
     .up{
@@ -529,6 +530,10 @@ body{
     .photo-category {
         min-height: 50vh;
     }
+
+    .contact-page-former {
+        width: 95%;
+    }
     .contact-page h3 {
         font-size: 1.5em;
         width: 85%;
@@ -537,5 +542,16 @@ body{
     .contact-page h4 {
         width: 85%;
         font-size: 1em;
+    }
+
+    #emailForm{
+        width:100%;
+        height: auto;
+    }
+    .form-container input, .form-container textarea {
+        width: 80% !important;
+    }
+    .form-container button {
+        width: 80% !important;
     }
 }
