@@ -159,7 +159,7 @@ document.getElementById('emailForm').addEventListener('submit', function(event) 
     .then(response => {
         if (response.ok) {
             // Masque le formulaire et affiche le message de remerciement
-            document.getElementById('emailForm').style.display = 'none';
+            document.getElementById('emailForm').className = 'hidden';
             const thankYouMessage = document.getElementById('thankYouMessage');
             thankYouMessage.style.display = 'block';
         } else {

@@ -153,10 +153,8 @@ body{
 .personne-img {
     top:0;
     flex: 0 0 auto;
-
     height: auto;
     max-height: 50vh;
-    
 }
 
 .personne-img img {
@@ -283,12 +281,6 @@ body{
     margin-bottom: 10em;
 }
 
-
-
-
-
-
-
 .contact-page{
     z-index: 1000;
     background-color: black;
@@ -408,7 +400,6 @@ body{
     display: none;
     text-align: center;
     font-size: 20px;
-    
     opacity: 0;
     animation: fadeIn 0.5s forwards;
 }
