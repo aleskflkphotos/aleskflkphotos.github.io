@@ -12,6 +12,7 @@ body{
     padding: 0;
     font-family: "Playfair Display", "Georgia", "Baskerville", serif;
     font-weight: bold;
+    overflow-x: hidden;
 }
 .up{
     width: 100vw;
@@ -22,6 +23,7 @@ body{
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .up .entete-img{
