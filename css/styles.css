@@ -15,7 +15,6 @@ body{
     overflow-x: hidden;
 }
 .up{
-    width: 100vw;
     height: auto;
     background-color: black;
     display: flex;
@@ -490,16 +489,21 @@ body{
 
 @media screen and (max-width: 1000px) {
     html,body{
-        width: 100vw;
+        overflow-x: hidden;
     }
 
     .up{
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
     }
 
     .title {
         font-size: 2em;
+    }
+
+    .center{
+        overflow-x: hidden;
     }
 
     .citation{
