@@ -26,108 +26,103 @@ gsap.from('.title', {
     duration: 1.5
 });
 
-var tl = gsap.timeline({
+// Première timeline (intro-for-photos)
+var tl1 = gsap.timeline({
     scrollTrigger: {
         trigger: ".intro-for-photos",
         start: "top bottom", 
         end: "bottom center",  
-        scrub: true,            
+        scrub: 0.5,  // Améliorer la fluidité
     }
 });
+tl1.from('.intro-for-photos', {
+    opacity: 0,
+    x: "-50%",
+    duration: 2,
+    ease: "power1.out"
+});
 
-
-var tl = gsap.timeline({
+// Deuxième timeline (jda)
+var tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: "#jda",
         start: "top bottom", 
         end: "bottom center",  
-        scrub: true,            
+        scrub: 0.5,  // Améliorer la fluidité
     }
 });
-
-tl.from("#jda > h1", { 
+tl2.from("#jda > h1", { 
     opacity: 0,     
     duration: 1, 
     ease: "power1.out", 
     stagger: 0.2 
 });
-tl.from('#jda > .img-section', {
+tl2.from('#jda > .img-section', {
     opacity: 0,
     y: "-25%",
-    duration: 2
+    duration: 2,
+    ease: "power1.out"
 });
 
-
-
-var tl = gsap.timeline({
+// Troisième timeline (cotedor)
+var tl3 = gsap.timeline({
     scrollTrigger: {
         trigger: "#cotedor",
         start: "top bottom", 
         end: "bottom center",  
-        scrub: true,            
+        scrub: 0.5,  // Améliorer la fluidité
     }
 });
-
-tl.from("#cotedor", { 
+tl3.from("#cotedor", { 
     opacity: 0,     
     duration: 1, 
     ease: "power1.out", 
     stagger: 0.2 
 });
-tl.from('#cotedor > .img-section', {
+tl3.from('#cotedor > .img-section', {
     opacity: 0,
     y: "-25%",
-    duration: 2
+    duration: 2,
+    ease: "power1.out"
 });
 
-var tl = gsap.timeline({
+// Quatrième timeline (nature)
+var tl4 = gsap.timeline({
     scrollTrigger: {
         trigger: "#nature",
         start: "top bottom", 
         end: "bottom center",  
-        scrub: true,            
+        scrub: 0.5,  // Améliorer la fluidité
     }
 });
-
-tl.from("#nature", { 
+tl4.from("#nature", { 
     opacity: 0,     
     duration: 1, 
     ease: "power1.out", 
     stagger: 0.2 
 });
-tl.from('#nature > .img-section', {
+tl4.from('#nature > .img-section', {
     opacity: 0,
     y: "50%",
     x: "50%",
-    duration: 2
+    duration: 2,
+    ease: "power1.out"
 });
 
-var tl = gsap.timeline({
+// Cinquième timeline (personne)
+var tl5 = gsap.timeline({
     scrollTrigger: {
         trigger: ".personne",
         start: "top bottom", 
         end: "bottom center",  
-        scrub: true,            
+        scrub: 0.5,  // Améliorer la fluidité
     }
 });
-tl.from('.personne', {
+tl5.from('.personne', {
     opacity: 0,
     x: "50%",
-    duration: 2
-});
-
-var tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".intro-for-photos",
-        start: "top bottom", 
-        end: "center center",  
-        scrub: true,            
-    }
-});
-tl.from('.intro-for-photos', {
-    opacity: 0,
-    x: "-50%",
-    duration: 2
+    duration: 2,
+    ease: "power1.out"
 });
 
 
